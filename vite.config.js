@@ -9,6 +9,7 @@ export default defineConfig(({ command }) => {
     define: {
       [command === 'serve' ? 'global' : '_global']: {},
     },
+    base: command === 'serve' ? '/' : '/js-course-final/',
     root: 'src',
     build: {
       sourcemap: true,
@@ -34,11 +35,15 @@ export default defineConfig(({ command }) => {
           },
         },
       },
-      outDir: '../dist',
+      outDir: '../docs',
       emptyOutDir: true,
     },
     plugins: [
-      injectHTML(),
+      injectHTML({
+        debug: {
+          logPath: true,
+        },
+      }),
       FullReload(['./src/**/**.html']),
       SortCss({
         sort: 'mobile-first',
