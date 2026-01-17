@@ -18,7 +18,13 @@ import {
 import { initHeader } from './js/header.js';
 import { displayQuote } from './js/quote.js';
 
-displayQuote();
+const scheduleIdle = callback => {
+  if (typeof window.requestIdleCallback === 'function') {
+    window.requestIdleCallback(callback, { timeout: 1200 });
+    return;
+  }
+  setTimeout(callback, 0);
+};
 
 async function subscribeToNewsletter(email) {
   try {
@@ -59,7 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initCardsEventListener();
 
-  loadExerciseCards('Muscles', 1);
+  scheduleIdle(displayQuote);
+  scheduleIdle(() => loadExerciseCards('Muscles', 1));
 
   const filtersContainer = document.querySelector(
     '.exercises__content__header-filters'
