@@ -1,19 +1,95 @@
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+  <div class="container header__container">
+    <a class="header__logo" href="#home" aria-label="Your Energy home">
+      <img src="/img/svg/logo-dark.svg" alt="Your Energy logo">
+    </a>
+    <nav class="header__nav" aria-label="Primary">
+      <ul class="header__nav-list">
+        <li class="header__nav-item">
+          <a class="header__nav-link header__nav-link--active" data-page="home" href="#home">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="header__nav-item">
+          <a class="header__nav-link" data-page="favorites" href="#favorites">Favorites</a>
         </li>
       </ul>
     </nav>
+    <ul class="header__socials" aria-label="Social links">
+      <li>
+        <a href="https://www.facebook.com" class="header__socials-link" aria-label="Facebook" target="_blank"
+          rel="noopener noreferrer">
+          <img src="/img/svg/facebook-dark.svg" alt="Facebook">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com" class="header__socials-link" aria-label="Instagram" target="_blank"
+          rel="noopener noreferrer">
+          <img src="/img/svg/instagram-dark.svg" alt="Instagram">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com" class="header__socials-link" aria-label="YouTube" target="_blank"
+          rel="noopener noreferrer">
+          <img src="/img/svg/youtube-dark.svg" alt="YouTube">
+        </a>
+      </li>
+      <li>
+        <a href="https://goit.global" class="header__socials-link header__socials-link--goit" aria-label="GoIT"
+          target="_blank" rel="noopener noreferrer">
+          <img src="/img/svg/runner-icon-light.svg" alt="GoIT">
+        </a>
+      </li>
+    </ul>
+    <button class="header__burger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </header>
+
+<div class="mobile-menu">
+  <div class="mobile-menu__content">
+    <button class="mobile-menu__close" aria-label="Close menu">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 7L7 21M7 7L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+    </button>
+    <nav class="mobile-menu__nav" aria-label="Mobile">
+      <ul class="mobile-menu__nav-list">
+        <li class="mobile-menu__nav-item">
+          <a class="mobile-menu__nav-link mobile-menu__nav-link--active" data-page="home" href="#home">Home</a>
+        </li>
+        <li class="mobile-menu__nav-item">
+          <a class="mobile-menu__nav-link" data-page="favorites" href="#favorites">Favorites</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="mobile-menu__socials" aria-label="Social links">
+      <li>
+        <a href="https://www.facebook.com" class="mobile-menu__socials-link" aria-label="Facebook" target="_blank"
+          rel="noopener noreferrer">
+          <img src="/img/svg/facebook-light.svg" alt="Facebook">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com" class="mobile-menu__socials-link" aria-label="Instagram" target="_blank"
+          rel="noopener noreferrer">
+          <img src="/img/svg/instagram-light.svg" alt="Instagram">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com" class="mobile-menu__socials-link" aria-label="YouTube" target="_blank"
+          rel="noopener noreferrer">
+          <img src="/img/svg/youtube-light.svg" alt="YouTube">
+        </a>
+      </li>
+      <li>
+        <a href="https://goit.global" class="mobile-menu__socials-link" aria-label="GoIT" target="_blank"
+          rel="noopener noreferrer">
+          <img src="/img/svg/runner-icon-light.svg" alt="GoIT">
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
